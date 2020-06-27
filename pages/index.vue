@@ -1,55 +1,38 @@
 <template>
-  <div class="container">
-    
-  </div>
+  <client-only>
+    <div>
+      <VueApexCharts
+        width="500"
+        type="area"
+        :options="chartOptions"
+        :series="series"
+      ></VueApexCharts>
+    </div>
+  </client-only>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-import Component from 'vue-class-component'
-import todoRepository from '~/repositories/Todo/todoRepository'
-
-@Component
-export default class index extends Vue {
-  created(){
-    console.log(this.$store);
-  }
-  
-  get todoRepo(){
-    return new todoRepository(this)
+<script>
+export default {
+  components: {
+    VueApexCharts: () => import('vue-apexcharts')
+  },
+  data() {
+    return {
+      chartOptions: {
+        chart: {
+          id: 'vuechart-example'
+        },
+        xaxis: {
+          categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+        }
+      },
+      series: [
+        {
+          name: 'series',
+          data: [30, 40, 35, 50, 49, 60, 70, 91]
+        }
+      ]
+    }
   }
 }
 </script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>

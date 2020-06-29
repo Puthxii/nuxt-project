@@ -1,6 +1,6 @@
 <template>
   <client-only>
-      <div id="chart">
+      <div class="container" id="chart">
         <div class="toolbar">
           <button id="one_month"
               @click="updateData('one_month')" :class="{active: selection==='one_month'}"
@@ -50,8 +50,9 @@
 <script>
 export default {
   components: {
-    VueApexCharts: () => import('vue-apexcharts')
+    VueApexCharts: () => import('vue-apexcharts') //shorten part
   },
+  // TODO : data adn decorate 
   data() {
     return {
       chartOptions: {
@@ -397,6 +398,7 @@ export default {
       }], 
     }
   },
+  // TODO : Function change data by date
   methods: {
     updateData: function(timeline) {
       this.selection = timeline

@@ -58,63 +58,66 @@ export default {
       chartOptions: {
         chart: {
           id: 'vuechart-example',
+          toolbar: {
+            show: false
+          },
           zoom: {
             autoScaleYaxis: true
           }
         },    
       annotations: {
-          xaxis: [{
-            x: new Date('14 Nov 2012').getTime(),
-            borderColor: '#999',
-            yAxisIndex: 0,
-            label: {
-              show: true,
-              text: 'Rally',
-              style: {
-                color: "#fff",
-                background: '#775DD0'
-              }
+        xaxis: [{
+          x: new Date('14 Nov 2012').getTime(),
+          borderColor: '#999',
+          yAxisIndex: 0,
+          label: {
+            show: true,
+            text: 'Rally',
+            style: {
+              color: "#fff",
+              background: '#775DD0'
             }
-          }],
-          yaxis: [{
-            y: 30,
-            borderColor: '#999',
-            label: {
-              show: true,
-              text: 'Support',
-              style: {
-                color: "#fff",
-                background: '#00E396'
-              }
+          }
+        }],
+        yaxis: [{
+          y: 30,
+          borderColor: '#999',
+          label: {
+            show: true,
+            text: 'Support',
+            style: {
+              color: "#fff",
+              background: '#00E396'
             }
-          }],
+          }
+        }],
+      },
+      dataLabels: {
+          enabled: false
         },
-        dataLabels: {
-            enabled: false
-          },
-          markers: {
-            size: 0,
-            style: 'hollow',
-          },
-          xaxis: {
-            type: 'datetime',
-            min: new Date('01 Mar 2012').getTime(),
-            tickAmount: 6,
-          },
-          tooltip: {
-            x: {
-              format: 'dd MMM yyyy'
-            }
-          },
-          fill: {
-            type: 'gradient',
-            gradient: {
-              shadeIntensity: 1,
-              opacityFrom: 0.7,
-              opacityTo: 0.9,
-              stops: [0, 100]
-            }
-          },
+        markers: {
+          size: 0,
+          style: 'hollow',
+        },
+        xaxis: {
+          type: 'datetime',
+          min: new Date('01 Mar 2012').getTime(),
+          tickAmount: 6,
+        },
+        tooltip: {
+          x: {
+            format: 'dd MMM yyyy'
+          }
+        },
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shadeIntensity: 1,
+            opacityFrom: 0.7,
+            opacityTo: 0.9,
+            stops: [0, 100]
+          }
+        },
       },
       selection: 'one_year',
       series: [{
@@ -439,3 +442,9 @@ export default {
   }
 }
 </script>
+
+<style >
+  .container {	
+  
+  }
+</style>

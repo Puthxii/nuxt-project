@@ -14,10 +14,12 @@
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.4.0",
     "apexcharts": "^3.19.2",
-    "bootstrap": "^5.0.0-alpha1",
+    "bootstrap": "^4.5.0",
+    "bootstrap-vue": "^2.15.0",
     "chart.js": "^2.9.3",
     "hchs-vue-charts": "^1.2.8",
     "nuxt": "^2.0.0",
+    "vue": "^2.6.11",
     "vue-apexcharts": "^1.5.3",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^8.5.0"

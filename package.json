@@ -18,7 +18,7 @@
     "bootstrap-vue": "^2.15.0",
     "chart.js": "^2.9.3",
     "hchs-vue-charts": "^1.2.8",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "vue": "^2.6.11",
     "vue-apexcharts": "^1.5.3",
     "vue-class-component": "^7.2.3",
